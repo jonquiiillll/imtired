@@ -49,6 +49,9 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+.text {
+  margin-top: -20px;
+}
 .container {
     width: 100%;
     height: auto;
@@ -89,9 +92,11 @@ table {
     justify-content: space-between;
 }
 .container_center {
-    width: 100%;
-    height: 60%;
+    width: auto;
+    margin: 0 auto;
+    height: auto;
     display: flex;
+    align-items: center;
 }
 .box {
     border-left: 3px solid white;
@@ -100,6 +105,9 @@ table {
     width: 20%;
     height: 162px;
     /*background-color: deeppink;*/
+}
+.hide {
+  display: none;
 }
 .box2 {
     border-top: 3px solid white;
@@ -132,12 +140,19 @@ table {
     /*background-color: deeppink;*/
 }
 .container_content {
+    position: fixed;
     height: 100vh;
    flex-wrap: wrap;
     align-self: flex-end;
     width: 100%;
     display: flex;
 }
+/*.box_after_all {*/
+/*    background-color: darkblue;*/
+/*    width: 100px;*/
+/*    height: 800px;*/
+
+/*}*/
 .line_bottom_left_first {
     width: 3px;
     height: 100%;
@@ -195,7 +210,7 @@ table {
     /*background-color: white;*/
 }
 .red_circle {
-
+    display: none;
     width: 35px;
     height: 35px;
     border-radius: 20px;
@@ -226,12 +241,55 @@ table {
 }
 
 .time_animation {
-    width: 100px;
-    height: 60px;
-    position: absolute;
-    background-color: white;
+    width: 80%;
+    height: 90%;
     align-self: flex-end;
-    margin: 20px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    display: flex;
+}
+.time_animation_2 {
+    width: 80%;
+    height: 90%;
+    align-self: flex-end;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    display: flex;
+}
+.position_of {
+  align-items: flex-end;
+}
+.container_for_stopwatch_static {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-family: Roboto Mono;
+  align-items: flex-end;
+}
+.container_for_stopwatch {
+  width: 100%;
+  height: 100%;
+  display: none;
+  font-family: Roboto Mono;
+  align-items: flex-end;
+  margin-top: -5px;
+  margin-left: 5px;
+}
+p {
+  color: white;
+  font-size: 30px
+}
+#random_number {
+  color: white;
+  font-size: 30px
+}
+#random_number2 {
+  color: white;
+  font-size: 30px
+}
+#random_number3 {
+  color: white;
+  font-size: 30px
 }
 .button_of_record {
     width: auto;
@@ -242,7 +300,7 @@ table {
     float: left;
 }
 .text_record {
-   
+    display: none;
     padding-left: 25px;
     width: 232px;
     height: 38px;
@@ -253,6 +311,16 @@ table {
     line-height: 33px;
     color: #FFFFFF;
 }
+.text_center {
+    font-family: Roboto Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 33px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
 .text_found {
     font-family: Roboto Mono;
     font-style: normal;
@@ -262,14 +330,35 @@ table {
     text-align: right;
     color: #FFFFFF;
 }
-.button_photo {
-    width: 60px;
-    margin: 25px;
-    height: 60px;
-    background-color: white;
+.main_part {
+  margin: 0 auto;
+}
+.circle_border {
     display: flex;
     align-self: flex-end;
-
+    margin: 30px;
+    width: 75px;
+    height: 75px;
+    border-radius: 60px;
+    border: 10px solid white;
+}
+.button_photo {
+    border-radius: 40px;
+    width: 59px;
+    margin: 0 auto;
+    height: 59px;
+    background-color: white;
+    display: flex;
+    align-self: center;
+    object-fit: cover;
+}
+.hidden {
+    opacity: 0;
+    transition: all .5s  linear;
+}
+.camera {
+    margin: 0 auto;
+    align-self: center;
 }
 .text_of_paranormal {
     position: absolute;
