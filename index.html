@@ -180,6 +180,25 @@ if (top < limit) {
     tgl(false);
 }
 });
+<div id="animation">Time for animation</div>
+<div class="test2"></div>
+<div class="fixed2 hidden2"></div>
+<script type="text/javascript" defer>
+var $win = $(window),
+$fixed = $(".fixed2"),
+limit = 3000;
+function tgl (state) {
+$fixed.toggleClass("hidden2", state);
+}
+$win.on("scroll", function () {
+var top = $win.scrollTop();
+if (top < limit) {
+    $(".fixed2").css('display', 'fixed');
+}
+ else {
+    tgl(false);
+}
+});
 </script>
 </body>
 </html>

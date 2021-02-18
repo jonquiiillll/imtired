@@ -429,6 +429,36 @@ p {
 .fixed.hidden {
     display: none;
 }
+.test2{
+    width: 100px;
+    height: 2000px;
+}
+.fixed2 {
+    position: fixed;
+    top: -180px;
+    left: 800px;
+    width: 70%;
+    height: 70%;
+    transform: rotate(-30deg);
+    object-fit: cover;
+    background-image: url('img/spun.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: botle_shadow 3s linear;
+    animation-fill-mode: both;
+}
+@keyframes botle_shadow {
+   0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 1;}
+}
+.fixed2.hidden2 {
+    display: none;
+}
+#animation2 {
+    position: fixed;
+    display: none;
+}
 .first {
     height: 4000px;
 }
