@@ -31,6 +31,12 @@
             $(".circle_border").click(function(){
                 $(".button_of_progress").css('display', 'flex');
             });
+            $(".circle_border").click(function(){
+                $("body").css('overflow-y', 'auto');
+            });
+            $(".circle_border").click(function(){
+                $("body").css('position', 'relative');
+            });
         });
     </script>
     <script type="text/javascript">
@@ -73,11 +79,22 @@
     myFunction();
     myFunctions();
     myFunctionsS();
+    function Show_img ()
+    {
+        setTimeout(function() {
+            var e = Math.round(Math.random() * (60 - 10) + 10);
+            console.info(e);
+            document.getElementById("random_number3").innerHTML = e;
+            myFunctions();
+        }, 100);
+    }
     </script>
 
 </head>
 <body>
-
+  <div class="botle_img">
+    <img src="img/botle.png" class="botle_img"alt="">
+  </div>
 <div class="container_content">
 <div class="container top">
     <div class="box">
@@ -105,13 +122,11 @@
             }
             </script>
             </div>
-
         </div>
     </div>
 </div>
     <div class="container_center text_center">
-        <p>для начала записи нажимте кнопку <br>
-            </p>
+        <p>для начала записи нажимте кнопку <br></p>
     </div>
 <div class="container2 bottom">
     <div class="box_bottom">
@@ -131,13 +146,10 @@
             <p id="random_number4"></p>
           </div>
         </div>
-
     </div>
     <div class="circle_border">
        <div class="button_photo">
-           <div class="camera">
-
-           </div>
+           <div class="camera"></div>
        </div>
     </div>
            <div class="box_bottom2">
@@ -149,6 +161,25 @@
            </div>
     </div>
 </div>
-<div class="box_after_all"></div>
+<div id="animation">Time for animation</div>
+<div class="test"></div>
+<div class="fixed hidden"></div>
+<script type="text/javascript" defer>
+var $win = $(window),
+$fixed = $(".fixed"),
+limit = 3000;
+function tgl (state) {
+$fixed.toggleClass("hidden", state);
+}
+$win.on("scroll", function () {
+var top = $win.scrollTop();
+if (top < limit) {
+    $(".fixed").css('display', 'fixed');
+}
+ else {
+    tgl(false);
+}
+});
+</script>
 </body>
 </html>

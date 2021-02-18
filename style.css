@@ -47,6 +47,8 @@ q:before, q:after {
 }
 body {
     height: 10000px;
+    overflow-y: hidden;
+    position: fixed;
 }
 
 table {
@@ -391,4 +393,51 @@ p {
     line-height: 33px;
     text-align: right;
     color: #FFFFFF;
+}
+.botle_img {
+  position: fixed;
+  width: 35%;
+  object-fit: cover;
+  transform: rotate(-20deg);
+  top: 20%;
+  left: 50%;
+  display: none;
+}
+.test {
+    width: 100px;
+    height: 2000px;
+}
+.fixed {
+    position: fixed;
+    top: -180px;
+    left: 800px;
+    width: 70%;
+    height: 70%;
+    transform: rotate(-30deg);
+    object-fit: cover;
+    background-image: url('img/botle.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: botle_shadow 3s linear;
+    animation-fill-mode: both;
+}
+@keyframes botle_shadow {
+   0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 1;}
+}
+.fixed.hidden {
+    display: none;
+}
+.first {
+    height: 4000px;
+}
+.second {
+    border: 1px solid white;
+    height: 100px;
+    display: fixed;
+}
+#animation {
+    position: fixed;
+    display: none;
 }
