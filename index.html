@@ -28,6 +28,9 @@
             $(".circle_border").click(function(){
                 $(".red_circle").css('display', 'flex');
             });
+            $(".circle_border").click(function(){
+                $(".button_of_progress").css('display', 'flex');
+            });
         });
     </script>
     <script type="text/javascript">
@@ -70,8 +73,8 @@
     myFunction();
     myFunctions();
     myFunctionsS();
-
     </script>
+
 </head>
 <body>
 
@@ -89,7 +92,20 @@
         <div class="button_of_progress">
             <div class="text_of_paranormal">
                 Паранормальные явления:
+                <div class="scroll_progress">
+                  <span class="scroll_progress__text">0%</span>
+                </div>
+                <script type="text/javascript">
+                var scrollProgress = document.querySelector('.scroll_progress__text');
+            window.onscroll = function() {
+            var offset = window.pageYOffset || document.documentElement.scrollTop,
+                windowHeight = document.documentElement.scrollHeight-document.documentElement.clientHeight,
+                progress = Math.floor(offset/windowHeight * 100);
+            scrollProgress.innerHTML = progress + '%'
+            }
+            </script>
             </div>
+
         </div>
     </div>
 </div>
