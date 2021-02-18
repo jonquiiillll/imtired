@@ -164,6 +164,9 @@
 <div id="animation">Time for animation</div>
 <div class="test"></div>
 <div class="fixed hidden"></div>
+<div id="animation">Time for animation</div>
+<div class="test"></div>
+<div class="fixed hidden"></div>
 <script type="text/javascript" defer>
 var $win = $(window),
 $fixed = $(".fixed"),
@@ -180,25 +183,24 @@ if (top < limit) {
     tgl(false);
 }
 });
-<div id="animation">Time for animation</div>
-<div class="test2"></div>
-<div class="fixed2 hidden2"></div>
-<script type="text/javascript" defer>
+</script>
+<!-- <script type="text/javascript">
 var $win = $(window),
-$fixed = $(".fixed2"),
-limit = 3000;
+$fixed2 = $(".fixed2"),
+ limit2= 1000;
 function tgl (state) {
-$fixed.toggleClass("hidden2", state);
+  $fixed2.toggleClass("hidden2", state);
 }
 $win.on("scroll", function () {
-var top = $win.scrollTop();
-if (top < limit) {
-    $(".fixed2").css('display', 'fixed');
-}
- else {
-    tgl(false);
-}
-});
-</script>
+  var top = $win.scrollTop();
+  if (top < limit2) {
+        $(".fixed2").css('display', 'fixed');
+      }
+       else {
+             tgl(false);
+           }
+         });
+
+</script> -->
 </body>
 </html>
